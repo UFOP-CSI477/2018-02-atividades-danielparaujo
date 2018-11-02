@@ -44,28 +44,29 @@ $(document).ready(function(){
   {
     var n1=parseFloat($("input[name='valor1']").val());
     var n2=parseFloat($("input[name='valor2']").val());
-    var aux= n1/(n2*n2);
+    var aux1= n1/(n2*n2);
+    var aux=aux1.toFixed(1);
     console.log(aux);
     console.log(n2);
     var res;
-    if(aux<18.5){
+    if(aux<=18.5){
       res="Subnutrição";
     }
-     if ((aux>18.5) && (aux<24.9)) {
+     if ((aux>18.5) && (aux<30)) {
       res="Peso Saudável";
     }
 
-     if (aux>25 && aux<29.9) {
+     if (aux>=25 && aux<30) {
       res="Sobrepeso";
     }
 
-     if (aux>30 && aux<34.9) {
+     if (aux>=30 && aux<35) {
       res="Obesidade grau 1";
     }
-     if (aux>35 && aux<39.9) {
+     if (aux>=35 && aux<40) {
       res="Obesidade grau 2";
     }
-     if ( aux>40) {
+     if ( aux>=40) {
       res="Obesidade grau 3";
     }
 
